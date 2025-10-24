@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout :: layout">
+<section>
+    <div class="text-center">
+        <h1 class="mt-4">Bienvenido a la Biblioteca Virtual</h1>
+        <p class="lead">Explora libros, comparte sugerencias y disfruta de la lectura</p>
+
+        <div class="ratio ratio-16x9 my-4">
+            <iframe src="https://www.youtube.com/embed/3yG6kYjv6tI" title="Lectura y creatividad" allowfullscreen></iframe>
+        </div>
+
+        <a class="btn btn-primary me-2" th:href="@{/books}">Ver libros</a>
+        <a class="btn btn-outline-secondary" th:href="@{/complaints/form}">Enviar sugerencia o queja</a>
+    </div>
+</section>
+</html>
