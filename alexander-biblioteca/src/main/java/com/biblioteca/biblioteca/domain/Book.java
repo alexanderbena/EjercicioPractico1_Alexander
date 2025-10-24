@@ -24,16 +24,16 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "tulo", nullable = false, length = 255)
+    @Column(name = "titulo", nullable = false, length = 255)
     private String title;
 
-    @Column(nullable = false, length = 200)
+    @Column(name = "autor", nullable = false, length = 200)
     private String author;
 
-    @Column(length = 20)
+    @Column(name = "isbn", length = 20)
     private String isbn;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "descripcion", columnDefinition = "TEXT")
     private String description;
 
     @ManyToOne
@@ -43,10 +43,10 @@ public class Book {
     @Column(name = "fecha_publicacion")
     private LocalDate publicationDate;
 
-    @Column(nullable = false)
-    private Boolean available = true;
+    @Column(name = "disponible", nullable = false)
+    private Boolean available;
 
-    @Column(precision = 10, scale = 2)
+    @Column(name = "precio", precision = 10, scale = 2)
     private BigDecimal price;
 
     @Column(name = "created_at", updatable = false)
@@ -55,6 +55,6 @@ public class Book {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
- 
+    // Getters y setters...
 }
 
