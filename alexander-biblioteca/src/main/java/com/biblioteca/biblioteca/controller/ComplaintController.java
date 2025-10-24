@@ -35,5 +35,7 @@ public class ComplaintController {
         complaintService.save(complaint);
         return "redirect:/";
     }
+    
+
 }
 
